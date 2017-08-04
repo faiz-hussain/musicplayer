@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import {Link} from 'react-router';
 
 
 var audio = document.getElementById("songs"); 
@@ -53,9 +54,9 @@ prevSong(songindex){
       <div className="App">
           
           <div className="top-bar"> 
-            {/*<Link to={"/songs"}>*/}
+            <Link to="/songs">
                 <img className="logo" src="../logo1.png"/> 
-           {/* </Link> */}
+           </Link> 
           </div>
           
           {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong })}
