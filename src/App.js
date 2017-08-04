@@ -51,11 +51,12 @@ prevSong(songindex){
   render() {
     const songs = this.props.route.songs
     return (
-      <div className="App">
+      <div className="App" style={{'background-image':`url(${this.props.route.songs[this.props.params.id].photo})`}}>
           
           <div className="top-bar"> 
             <Link to="/songs">
-                <img className="logo" src="../logo1.png"/> 
+                <img className="logo" src="../logoo.gif"/> 
+                <h4 className="songify"> songify </h4>
            </Link> 
           </div>
           

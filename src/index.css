@@ -3,15 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
   text-align: center;
-  background-image: '../bg.gif'
+  
 }
 
 .top-bar{
-  background-color: lightcyan;
   height: 30%;
   width: 100%;
   margin-top: 0%;
-  text-align: center;
+  text-align: left;
   position: relative;
 }
 
@@ -49,4 +48,20 @@ body {
 .changer{
   max-width: 10%;
 
+}
+
+ a{
+  text-decoration: none;
+  color: lightgray;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  display: inline-block;
+}
+
+a:visited {
+  text-decoration: none;
+  color: lightgray;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  display: inline-block;
 }
