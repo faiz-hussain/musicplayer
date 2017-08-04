@@ -14,17 +14,13 @@ class SongsList extends Component {
         console.log(this.props.currentsong)
 
         return (
-            <div className="container">
-                <div className="songList" style={{'background-image':`url(${this.props.songs[this.props.currentsong].photo})`}}>
-                </div>
-
-                <div>
-                    <h1> THIS IS A SONGS LIST </h1>
-                    <ul>
-                        {tunes}
-                    </ul>
-                </div>
-        )   </div>
+            <div className="songList" style={{'background-image':`url(${this.props.songs[this.props.currentsong].photo})`}}>
+                <h1> THIS IS A SONGS LIST </h1>
+                <ul>
+                    {tunes}
+                </ul>
+            </div>
+        )
     }
 }
 
