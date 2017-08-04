@@ -15,7 +15,7 @@ h4{
   width: 100%;
   margin-top: 0%;
   text-align: left;
-  position: relative;
+  position: absolute;
 }
 
 .player{
@@ -30,6 +30,7 @@ h4{
   max-width: 100px;
   max-height: 40px;
   display: inline-block; 
+  margin-left: 10px;
 }
 
 .play{
@@ -69,4 +70,16 @@ a:visited {
   text-decoration-line: none;
   text-decoration-style: none;
   display: inline-block;
+}
+
+.homebody{
+  height:500px;
+  width:100%;
+  background-size: cover;
+  margin-top: -20px;
+  
+}
+
+.songify{
+  margin-left: 10px;
 }
