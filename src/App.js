@@ -34,14 +34,17 @@ changeSong(songindex){
 } 
 
 nextSong(songindex){
-   this.setState ({ currentsong: this.state.currentsong + 1})
-    if (this.state.currentsong === 2 ){
+   this.setState ({ currentsong: this.state.currentsong + 1, playing: true},()=>{ document.getElementById("songs").play(); console.log("auo")})
+    if (this.state.currentsong === this.props.route.songs.length -1 ){
       this.setState({currentsong: 0})
     }
-    if (this.state.playing === true){
-      audio.play()
-    }
 }
+
+//     componentDidUpdate(prevProps, prevState){
+//     if (this.state.playing === true && this.state.currentsong === 0 && this.prevProps){
+//       audio.play()
+//     }
+// }
 
 prevSong(songindex){
   this.setState({currentsong: this.state.currentsong - 1})
@@ -50,6 +53,7 @@ prevSong(songindex){
 }
   render() {
     const songs = this.props.route.songs
+    console.log(this.props.route.songs.length);
     return (
       <div className="App">
           
