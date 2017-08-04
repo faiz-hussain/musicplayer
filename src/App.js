@@ -55,7 +55,7 @@ prevSong(songindex){
     const songs = this.props.route.songs
     console.log(this.props.route.songs.length);
     return (
-      <div className="App" style={{'background-image':`url(${this.props.route.songs[this.props.params.id].photo})`}}>
+      <div className="App">
           
           <div className="top-bar"> 
             <Link to="/songs">
@@ -64,7 +64,7 @@ prevSong(songindex){
            </Link> 
           </div>
           
-          {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong })}
+          {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong})}
 
           <div className="player">
             <audio controls id="songs" src={songs[this.state.currentsong].source}/>

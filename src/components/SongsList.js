@@ -10,15 +10,21 @@ class SongsList extends Component {
         tunes = this.props.songs.map((song, i)=>{
             return <Link to={"/songs/"+song.id}>{song.title} <button onClick={()=> this.props.changeSong(i)}> <img className="play" src="./play.png"/> </button> </Link>
         })
-        console.log(this.props.songs)
+        console.log(this.props.route)
+        console.log(this.props.currentsong)
+
         return (
-            <div>
-                <h1> THIS IS A SONGS LIST </h1>
-                <ul>
-                    {tunes}
-                </ul>
-            </div>
-        )
+            <div className="container">
+                <div className="songList" style={{'background-image':`url(${this.props.songs[this.props.currentsong].photo})`}}>
+                </div>
+
+                <div>
+                    <h1> THIS IS A SONGS LIST </h1>
+                    <ul>
+                        {tunes}
+                    </ul>
+                </div>
+        )   </div>
     }
 }
 
