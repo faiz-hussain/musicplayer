@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-image: '../bg.gif'
+}
+
+.top-bar{
+  background-color: lightcyan;
+  height: 30%;
+  width: 100%;
+  margin-top: 0%;
+  text-align: center;
+  position: relative;
+}
+
+.player{
+  background-color:teal;
+  height: 30%;
+  width: 100%;
+  margin-top: 40%;
+  text-align: left;
+}
+
+.logo{
+  max-width: 100px;
+  max-height: 40px;
+}
+
+.play{
+  max-width: 40px;
+  max-height: 40px;
+}
+
+#song{
+  width:100%;
+}
+
+.des{
+  max-width:30%;
+  margin-left:35%;
+}
+
+.photo{
+   max-width:43%;
+}
+
+.changer{
+  max-width: 10%;
+
+}
