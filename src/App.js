@@ -40,14 +40,8 @@ nextSong(songindex){
     }
 }
 
-//     componentDidUpdate(prevProps, prevState){
-//     if (this.state.playing === true && this.state.currentsong === 0 && this.prevProps){
-//       audio.play()
-//     }
-// }
-
 prevSong(songindex){
-  this.setState({currentsong: this.state.currentsong - 1})
+  this.setState({currentsong: this.state.currentsong - 1, playing: true},()=>{ document.getElementById("songs").play();})
     if (this.state.currentsong === 0)
       this.setState({ currentsong: 2})
 }
