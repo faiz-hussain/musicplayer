@@ -16,7 +16,7 @@ class SongsList extends Component {
         return (
               <div className="container">
                 <div className="homebody" style={{'background-image':`url(${this.props.songs[this.props.currentsong].photo})`}}>
-                    <p>              .      </p>
+                    <p>  </p>
                 </div>
                     <div className="songList">
                         <ul>
