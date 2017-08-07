@@ -59,13 +59,11 @@ prevSong(songindex){
           </div>
           
           {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong})}
-
-          <div className="player">
+          <div className="player col-md-8 .col-md-offset-2">
             <audio controls id="songs" src={songs[this.state.currentsong].source}/>
-            <button className="changer" onClick={this.prevSong}><img src="../left_arrow.png"/></button>
-            <button className="changer" onClick={this.nextSong}><img src="../right_arrow.png"/></button>
+            <button className="changer" onClick={this.prevSong}><img className= "nextprev" src="../left_arrow.png"/></button>
+            <button className="changer" onClick={this.nextSong}><img className= "nextprev" src="../right_arrow.png"/></button>
           </div>
-
       </div>
     );
   }

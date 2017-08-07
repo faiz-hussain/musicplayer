@@ -15,15 +15,16 @@ h4{
   width: 100%;
   margin-top: 0%;
   text-align: left;
-  position: absolute;
+  position: fixed;
 }
 
 .player{
-  background-color:teal;
   height: 30%;
   width: 100%;
-  margin-top: 40%;
+  margin-top: 10%;
   text-align: left;
+  position:fixed;
+  margin-left:10%;
 }
 
 .logo{
@@ -38,8 +39,8 @@ h4{
   max-height: 40px;
 }
 
-#song{
-  width:100%;
+#songs{
+  width:70%;
 }
 
 .des{
@@ -52,8 +53,7 @@ h4{
 }
 
 .changer{
-  max-width: 10%;
-
+  width: 5%;
 }
 
  a{
@@ -82,4 +82,12 @@ a:visited {
 
 .songify{
   margin-left: 10px;
+}
+
+#songs {
+}
+
+.nextprev{
+  max-height: 20px;
+  margin-bottom: 10%;
 }
