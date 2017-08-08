@@ -37,9 +37,9 @@ h4{
 
 .player{
   width: 100%;
-  margin-left:10%;
   position: fixed;
   bottom:0;
+
 }
 
 audio{
