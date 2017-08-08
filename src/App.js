@@ -14,6 +14,8 @@ SC.initialize({
         console.log(tracks);
       });
 
+console.log(SC.get('/tracks'));
+
 
 var audio = document.getElementById("songs"); 
 
