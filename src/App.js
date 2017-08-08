@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
 import './index.css';
 import {Link} from 'react-router';
+import SC from 'soundcloud';
+
+SC.initialize({
+  client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS',
+  // redirect_uri: 'http://example.com/callback'
+});
+
+      SC.get('/tracks', {
+        genres: 'all', 
+      }).then(function(tracks) {
+        console.log(tracks);
+      });
+
+console.log(SC.get('/tracks'));
 
 
 var audio = document.getElementById("songs"); 
 
+
+      // find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
 
 class App extends Component {
   constructor(){
