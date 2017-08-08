@@ -50,7 +50,7 @@ prevSong(songindex){
     console.log(this.props.route.songs.length);
     return (
       <div className="App">
-          
+          <div className="wrapper">
           <div className="top-bar"> 
             <Link to="/songs">
                 <img className="logo" src="../logoo.gif"/> 
@@ -59,6 +59,7 @@ prevSong(songindex){
           </div>
           
           {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong})}
+          </div>
           <div className="player col-md-8 .col-md-offset-2">
             <audio controls id="songs" src={songs[this.state.currentsong].source}/>
             <button className="changer" onClick={this.prevSong}><img className= "nextprev" src="../left_arrow.png"/></button>
