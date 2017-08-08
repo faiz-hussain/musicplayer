@@ -38,6 +38,10 @@ h4{
   bottom:0;
 }
 
+audio{
+  vertical-align: bottom;
+}
+
 .logo{
   max-width: 100px;
   max-height: 40px;
@@ -48,6 +52,8 @@ h4{
 .play{
   max-width: 40px;
   max-height: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 #songs{
@@ -65,6 +71,12 @@ h4{
 
 .changer{
   width: 5%;
+  background-color: transparent;
+  border: none;
+
+}
+.changer:focus{
+  outline: none;
 }
 
  a{
@@ -101,6 +113,7 @@ a:visited {
 .nextprev{
   max-height: 20px;
   margin-bottom: 10%;
+  border:none;
 }
 
 .allSongs{
@@ -112,4 +125,6 @@ a:visited {
 .thumbnail{
   max-height: 100px;
   max-width: 100px;
+  background-color: none;
+  border: none;
 }
