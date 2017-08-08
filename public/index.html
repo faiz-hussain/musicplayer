@@ -14,23 +14,24 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-    <script>
-    SC.initialize({
-      client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS'
-    });
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+       <!-- <script>
+      SC.initialize({
+        client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS'
+      });
 
-    // find all sounds of buskers licensed under 'creative commons share alike'
-    SC.get('/tracks', {
-      q: 'buskers', license: 'cc-by-sa'
-    }).then(function(tracks) {
-      console.log(tracks);
-    });
-    </script>
-    <title>Songify</title>
+      // find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
+      SC.get('/tracks', {
+        genres: 'hip-hop'
+      }).then(function(tracks) {
+        console.log(tracks);
+      });
+    </script> -->
+    <title>Songify</title> 
   </head>
   <body>
     <div id="root"></div>
+<!-- '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS' -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

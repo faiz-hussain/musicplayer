@@ -5,7 +5,7 @@ import App from './App';
 import SongsList from './components/SongsList';
 import SongDetails from './components/SongDetails';
 import './index.css';
-
+//import SC from 'soundcloud';
 
 function Song(source, title, description, photo, id) {
   this.source = source;
