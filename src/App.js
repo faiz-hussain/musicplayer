@@ -19,8 +19,7 @@ class App extends Component {
   }
 
 changeSong(songindex){
-  this.setState ({currentsong: songindex,
-                  playing : true  }) 
+  this.setState ({currentsong: songindex, playing : true  },()=>{ document.getElementById("songs").play();}) 
 }
 
  play() { 
