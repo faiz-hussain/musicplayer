@@ -7,7 +7,8 @@ class SongDetails extends Component {
         return (
             <div>
                 
-                  <h1>{(this.props.songs[this.props.params.id].title)}</h1>
+                  <h1>{(this.props.songs[this.props.params.id].title)} <button><img className="fave" src="../fave.png"/></button> </h1> 
+                  
                   <img className="photo" src= {(this.props.songs[this.props.params.id].photo)}/>
                   <p className="des">{(this.props.songs[this.props.params.id].description)}</p>
             
