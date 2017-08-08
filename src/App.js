@@ -45,6 +45,7 @@ prevSong(songindex){
       this.setState({ currentsong: 2})
 }
   render() {
+    
     const songs = this.props.route.songs
     console.log(this.props.route.songs.length);
     return (
