@@ -108,3 +108,8 @@ a:visited {
   margin-right: 1%;
   margin-top: 3%;
 }
+
+.thumbnail{
+  max-height: 100px;
+  max-width: 100px;
+}

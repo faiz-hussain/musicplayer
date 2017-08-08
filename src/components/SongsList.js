@@ -6,7 +6,7 @@ class SongsList extends Component {
     render() {
         let tunes = []
         tunes = this.props.songs.map((song, i)=>{
-            return <div className="allSongs"><Link to={"/songs/"+song.id}>{song.title}</Link> <button onClick={()=> this.props.changeSong(i)}> <img className="play" src="./play.png"/> </button></div>
+            return <div className="allSongs"><Link to={"/songs/"+song.id}><img className="thumbnail" src={song.photo}/>{song.title}</Link> <button onClick={()=> this.props.changeSong(i)}> <img className="play" src="./play.png"/> </button></div>
         })
         console.log(this.props.route)
         console.log(this.props.currentsong)
