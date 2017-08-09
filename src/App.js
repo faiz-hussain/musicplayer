@@ -4,18 +4,9 @@ import {Link} from 'react-router';
 import SC from 'soundcloud';
 
 SC.initialize({
-  client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS',
+  client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS'
   // redirect_uri: 'http://example.com/callback'
 });
-
-      SC.get('/tracks', {
-        genres: 'all', 
-      }).then(function(tracks) {
-        console.log(tracks);
-      });
-
-console.log(SC.get('/tracks'));
-
 
 var audio = document.getElementById("songs"); 
 
@@ -23,16 +14,58 @@ var audio = document.getElementById("songs");
       // find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    // console.log(this.props.route.songs)
       this.state = {
         currentsong : 0,
         playing: false,
+        songs: this.props.route.songs
       }
       this.changeSong = this.changeSong.bind(this)
       this.nextSong = this.nextSong.bind(this)
       this.prevSong = this.prevSong.bind(this)
   }
+
+  componentWillMount(){
+    // let self = this;
+    let songHolder = [];
+      SC.get('/tracks', 
+      ).then((tracks) => {
+        console.log(SC.get('/tracks'));
+        for(let i = 0; i < tracks.length; i ++){
+          let song = new ScSong(tracks[i])
+          songHolder.push(song);
+        }
+        console.log(songHolder);
+        this.setState({
+          songs: songHolder
+        }, console.log(this.state))
+      });
+      function ScSong(scTrack){
+        this.source = scTrack.stream_url + '?client_id=0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS';
+        this.title = scTrack.title;
+        this.description = scTrack.description;
+        this.photo = scTrack.artwork_url;
+        this.id = scTrack.id;
+      }
+  }
+
+  
+  
+  // function Person (name, age){
+  //   this.name = name; 
+  //   this.age = age;
+  // }
+
+  // let Teanna = new Person('Teanna', '21')
+  // console.log(Teanna )
+
+  // array = [, , , ]
+  // for(length of array){
+  //   eachPerson = new Person(array[i].name, array[i].age)
+  //   newarray.push(eachPerson)
+  // }
 
 changeSong(songindex){
   this.setState ({currentsong: songindex, playing : true  },()=>{ document.getElementById("songs").play();}) 
@@ -62,8 +95,8 @@ prevSong(songindex){
 }
   render() {
     
-    const songs = this.props.route.songs
-    console.log(this.props.route.songs.length);
+    // const hello = this.props.route.songs
+    // console.log(this.props.route.songs.length);
     return (
       <div className="App">
           <div className="wrapper">
@@ -74,10 +107,10 @@ prevSong(songindex){
            </Link> 
           </div>
           
-          {React.cloneElement(this.props.children, { songs: songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong, playing: this.state.playing})}
+          {React.cloneElement(this.props.children, { songs: this.state.songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong, playing: this.state.playing})}
           </div>
           <div className="player col-md-8 .col-md-offset-2">
-            <audio controls id="songs" src={songs[this.state.currentsong].source}/>
+            <audio controls id="songs" src={this.state.songs[this.state.currentsong].source}/>
             <button className="changer" onClick={this.prevSong}><img className= "nextprev" src="../left_arrow.png"/></button>
             <button className="changer" onClick={this.nextSong}><img className= "nextprev" src="../right_arrow.png"/></button>
           </div>

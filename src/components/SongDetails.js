@@ -4,6 +4,7 @@ class SongDetails extends Component {
     render() {
 
         console.log(this.props.songs[this.props.params.id])
+        console.log(this.props.songs);
         return (
             <div>
                 
