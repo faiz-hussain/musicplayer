@@ -128,7 +128,7 @@ a:visited {
 .allSongs{
   display:inline-block;
   margin-right: 1%;
-  margin-top: 3%;
+  margin-top: 10%;
 }
 
 .thumbnail{
@@ -136,4 +136,8 @@ a:visited {
   max-width: 100px;
   background-color: none;
   border: none;
+}
+
+.songList{
+  display:block;
 }
