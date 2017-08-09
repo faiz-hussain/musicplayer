@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway');
+
+
 html, body {
   height: 100%;
 }
@@ -29,17 +32,22 @@ h4{
   margin-top: 0%;
   text-align: left;
   position: fixed;
+  z-index: 1000;
 }
 
 .songify{
-  vertical-align: bottom;
+  vertical-align: top;
+  z-index: 1000;
+  position: relative;
+  top: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 18pt;
 }
 
 .player{
   width: 100%;
   position: fixed;
   bottom:0;
-
 }
 
 audio{
@@ -58,6 +66,7 @@ audio{
   max-height: 40px;
   background-color: transparent;
   border: none;
+  text-align: center;
 }
 
 #songs{
@@ -117,8 +126,45 @@ a:visited {
   background-size: cover;
   margin-top: -20px;
   margin-left:-15%;
- 
-  
+}
+.homebody p {
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+    background: -webkit-linear-gradient(red,yellow,blue); /* Safari 5.1-6.0 */
+    background: -o-linear-gradient(red,yellow,blue); /* Opera 11.1-12.0 */ 
+    background: -moz-linear-gradient(red,yellow,blue); /* Firefox 3.6-15 */
+    background: linear-gradient(red,yellow,blue); /* Standard syntax */
+    opacity:.3;
+}
+
+.allSongs button {
+  background:transparent;
+  border:none;
+  position:relative;
+  vertical-align: top;
+  text-align: center;
+}
+
+.allSongs button {
+  width:98px;
+  height:98px;
+    position:relative;
+  top:-120px;
+  left:0px;
+}
+
+.allSongs button img {
+  width:100px;
+  height:100px;
+  position:relative;
+}
+
+.songTitle {
+  margin-top:0px;
+  position:relative;
+  top:-100px;
 }
 
 .songify{
@@ -133,9 +179,13 @@ a:visited {
 }
 
 .allSongs{
+  width:101px;
+  height:190px;
+  overflow:hidden;
   display:inline-block;
   margin-right: 1%;
   margin-top: 3%;
+  vertical-align: top;
 }
 
 .thumbnail{
@@ -143,4 +193,8 @@ a:visited {
   max-width: 100px;
   background-color: none;
   border: none;
+}
+
+.songList{
+  padding-bottom: 55px;
 }

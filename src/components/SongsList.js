@@ -6,14 +6,14 @@ class SongsList extends Component {
     render() {
         let tunes = []
         tunes = this.props.songs.map((song, i) => {
-            return <div className="allSongs"><Link to={"/songs/" + song.id}><img className="thumbnail" src={song.photo} />{song.title}</Link> <button onClick={() => this.props.changeSong(i)}> <img className="play" src="./play.png" /> </button></div>
+            return <div className="allSongs"><img className="thumbnail" src = { song.photo? song.photo : `../music.jpg`} /><button onClick={() => this.props.changeSong(i)}><img className="play" src="./play.png" /> </button><div className="songTitle"><Link to={"/songs/" + song.id}>{song.title}</Link></div></div>
         })
         console.log(this.props.route)
         console.log(this.props.currentsong)
         
 
         var mainbgstyle = {
-            'background-image': ( this.props.playing? `url(${this.props.songs[this.props.currentsong].photo})` : `url(../home2.jpg)`)
+            'background-image': ( this.props.playing? `url(${this.props.songs[this.props.currentsong].photo})` : `url(../backgroundgirl.jpg)`)
         }
 
         return (

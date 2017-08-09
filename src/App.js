@@ -30,8 +30,10 @@ class App extends Component {
   componentWillMount(){
     // let self = this;
     let songHolder = [];
-      SC.get('/tracks', 
-      ).then((tracks) => {
+      SC.get('/tracks', {
+       genres: 'hip-hop'
+      })
+      .then((tracks) => {
         console.log(SC.get('/tracks'));
         for(let i = 0; i < tracks.length; i ++){
           let song = new ScSong(tracks[i])
