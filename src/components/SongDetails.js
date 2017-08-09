@@ -14,7 +14,7 @@ class SongDetails extends Component {
         //declare a new variable or state and equate it to the matched object in the songs array 
 
 
-    }
+    
     render() {
 
         console.log(this.props.songs[this.props.params.id])
