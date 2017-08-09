@@ -19,7 +19,10 @@ class SongsList extends Component {
         return (
             <div className="container">
                 <div className="homebody" style={mainbgstyle}>
-                    <p>  </p>
+                    <p> 
+                        <img className="mnLogo" src="../songift.png"/> 
+
+                         </p>
                 </div>
                 <div className="songList">
                     <ul>

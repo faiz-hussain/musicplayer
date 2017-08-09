@@ -108,7 +108,6 @@ prevSong(songindex){
                 <h4 className="songify"> songify </h4>
            </Link> 
           </div>
-          
           {React.cloneElement(this.props.children, { songs: this.state.songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong , currentsong: this.state.currentsong, playing: this.state.playing})}
           </div>
           <div className="player col-md-8 .col-md-offset-2">

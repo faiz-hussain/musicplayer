@@ -132,10 +132,10 @@ a:visited {
   height:100%;
   margin:0px;
   padding:0px;
-    background: -webkit-linear-gradient(red,yellow,blue); /* Safari 5.1-6.0 */
-    background: -o-linear-gradient(red,yellow,blue); /* Opera 11.1-12.0 */ 
-    background: -moz-linear-gradient(red,yellow,blue); /* Firefox 3.6-15 */
-    background: linear-gradient(red,yellow,blue); /* Standard syntax */
+    background: -webkit-linear-gradient(blueviolet,hotpink,chartreuse); /* Safari 5.1-6.0 */
+    background: -o-linear-gradient(blueviolet, hotpink,chartreuse); /* Opera 11.1-12.0 */ 
+    background: -moz-linear-gradient(blueviolet,hotpink,chartreuse); /* Firefox 3.6-15 */
+    background: linear-gradient(blueviolet,hotpink,chartreuse ); /* Standard syntax */
     opacity:.3;
 }
 
@@ -171,7 +171,11 @@ a:visited {
   margin-left: 10px;
 }
 
-
+.mnLogo{
+  margin-top: 10%;
+  z-index: 1002;
+  opacity: 1;
+}
 .nextprev{
   max-height: 20px;
   margin-bottom: 10%;
