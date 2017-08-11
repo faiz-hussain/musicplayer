@@ -21,8 +21,7 @@ class SongsList extends Component {
                 <div className="homebody" style={mainbgstyle}>
                     <p> 
                         <img className="mnLogo" src="../songift.png"/> 
-
-                         </p>
+                    </p>
                 </div>
                 <div className="songList">
                     <ul>
