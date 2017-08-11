@@ -31,7 +31,7 @@ class App extends Component {
     // let self = this;
     let songHolder = [];
       SC.get('/tracks', {
-       genres: 'rock'
+       genres: 'hip-hop'
       })
       .then((tracks) => {
         console.log(SC.get('/tracks'));
@@ -102,6 +102,9 @@ prevSong(songindex){
     return (
       <div className="App">
           <div className="wrapper">
+          <div id="homelogo">
+            
+           </div>
           <div className="top-bar"> 
             <Link to="/songs">
                 <img className="logo" src="../logoo.gif"/> 

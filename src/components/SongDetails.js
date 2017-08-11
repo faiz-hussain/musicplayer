@@ -27,14 +27,20 @@ class SongDetails extends Component {
         // console.log(this.props.songs[this.props.params.id])
         console.log(this.props.params.id);
         return (
+            <div>
+            <div className="verytop">
+                <p> </p>
+            </div>
             <div className="plzwork">
                 {/*//render the new variable */}
-                  <h1>{(this.props.songs[this.state.thing].title)} <button><img className="fave" src="../fave.png"/></button> </h1> 
+                  <h1>{(this.props.songs[this.state.thing].title)} <br/><button><img className="fave" src="../fave.png"/><span>add to favorites</span></button> </h1> 
                   
                   <img className="photo" src= {(this.props.songs[this.state.thing].photo)}/>
                   <p className="des">{(this.props.songs[this.state.thing].description)}</p>
             
             </div>
+            </div>
+            
         )
     }
     }
