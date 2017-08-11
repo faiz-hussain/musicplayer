@@ -189,7 +189,8 @@ a:visited {
 .plzwork button span{
 vertical-align: center;
 position:relative;
-top: -10px;
+top: -5px;
+left: 5px;
 font-size: 14px;
 }
 
@@ -260,10 +261,14 @@ p .mnLogo{
 }
 
 .photo{
-   max-width:43%;
-   margin-top: 20px;
+   width:200px;
+   margin-top: 10px;
 }
 
 .container {
   z-index:1000;
+}
+
+.des{
+  margin-top: 25px;
 }
