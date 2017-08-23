@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import { Link } from 'react-router';
 import SC from 'soundcloud';
+const apikey = require ("./apikey.js");
 
 SC.initialize({
   client_id: apikey
@@ -31,7 +32,7 @@ class App extends Component {
     // let self = this;
     let songHolder = [];
     var page_size = 100;
-    SC.get('/tracks?genre=hiphop', {
+    SC.get('/tracks?genre=hip-hop', {
     })
       .then((tracks) => {
         console.log(SC.get('/tracks'));
@@ -45,7 +46,7 @@ class App extends Component {
         }, console.log(this.state))
       });
     function ScSong(scTrack) {
-      this.source = scTrack.stream_url + '?client_id=0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS';
+      this.source = scTrack.stream_url + '?client_id=' + apikey;
       this.title = scTrack.title;
       this.description = scTrack.description;
       this.photo = scTrack.artwork_url;
