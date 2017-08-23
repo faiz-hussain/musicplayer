@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import SC from 'soundcloud';
 
 SC.initialize({
-  client_id: '0hH9etIZi7ZfHXZWUk3ZtpVxdu3GyQdS'
+  client_id: apikey
   // redirect_uri: 'http://example.com/callback'
 });
 
